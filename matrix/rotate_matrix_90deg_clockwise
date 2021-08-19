@@ -1,0 +1,24 @@
+Leetcode 48. Rotate Image
+
+//function to rotate a matrix 90 degree clockwise
+
+void rotate(vector<vector<int>>& matrix) {
+        if(matrix.size()==0 || matrix[0].size()==0)
+            return;
+        for(int i=0; i<matrix.size(); ++i)
+        {
+            for(int j=i+1; j<matrix[i].size(); ++j)
+            {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+        int l=0, r=matrix[0].size()-1;
+        while(l<=r)
+        {
+            for(int i=0; i<matrix.size(); ++i)
+            {
+                swap(matrix[i][l], matrix[i][r]);
+            }
+            ++l, --r;
+        }
+    }
