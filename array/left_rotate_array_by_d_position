@@ -1,0 +1,39 @@
+void rotateArr(int arr[], int d, int n){
+        d=d%n;
+        if(!d)
+            return;
+        // first method using linear space and time
+        /*int temp[n]={0};
+        for(int i=0; i<n; ++i)temp[i]=arr[i];
+        for(int i=0; i<n; ++i)
+        {
+            if(i-d<0)
+            {
+                arr[i-d+n]=temp[i];
+            }
+            else
+            {
+                arr[i-d]=temp[i];
+            }
+        }*/
+        
+        //second method using linear time and constant space;
+        int l=0, r=d-1;
+        while(l<r)
+        {
+            swap(arr[l], arr[r]);
+            ++l, --r;
+        }
+        l=d, r=n-1;
+        while(l<r)
+        {
+            swap(arr[l], arr[r]);
+            ++l, --r;
+        }
+        l=0, r=n-1;
+        while(l<r)
+        {
+            swap(arr[l], arr[r]);
+            ++l, --r;
+        }
+    }
