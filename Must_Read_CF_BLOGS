@@ -1,0 +1,4 @@
+// map is faster than unordered_map
+// solutions using unordered_map gets hacked
+
+# link to cf blog : https://codeforces.com/blog/entry/62393
