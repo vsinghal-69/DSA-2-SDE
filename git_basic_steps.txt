@@ -1,0 +1,13 @@
+1. touch file_name_without_space   // touch command creates a file with specified name in the current directory
+ 
+
+2. start file_name_to_open // start command opens the file with specified name in windows os
+
+
+3. git add . // this command adds a file to staged area
+
+
+4. git commit -m " commit message"
+
+
+5. git push -u origin master
